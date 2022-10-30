@@ -1,0 +1,47 @@
+Questão 1 - Construir um MER para a situação problema apresentada.
+
+Entidades:
+Cliente
+Venda
+Pedido
+Produto
+
+Atributos:
+Cliente (Nome_do_cliente, telefone, email, CPF)
+Venda (id_pedido, desc_venda, val_total_desc)
+Pedido (cod_produto, qnt, val_total) 
+Produto (Preco, detalhe_pdto, marca, und)
+
+Relacionamento:
+cliente --> pedido --> produto 
+pedido --> venda
+
+Questão 3
+
+create schema `sz-00006-ws.emp_gama`;
+
+create table `sz-00006-ws.emp_gama.cliente` (
+  nome_do_cliente string,
+  telefone string,
+  email string,
+  CPF int64,
+)
+
+create table `sz-00006-ws.emp_gama.produtos` (
+  detalhe_pdto string,
+  marca string,
+  und string,
+  Preco float64,
+)
+
+create table `sz-00006-ws.emp_gama.pedido` (
+  cod_produto string,
+  qnt string,
+  val_total float64,
+)
+
+create table `sz-00006-ws.emp_gama.venda` (
+  id_pedido string,
+  desc_venda string,
+  val_total_desc float64,
+)
